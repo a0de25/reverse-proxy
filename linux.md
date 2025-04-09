@@ -1,14 +1,16 @@
 # running on linux
 
 ## installing swift
+
+https://www.swift.org/install/linux/
+
 use swiftly to install and manage swift toolchains
 ```
-curl -L https://swiftlang.github.io/swiftly/swiftly-install.sh | bash
-```
-
-get the latest version of swift
-```
-swiftly install latest
+curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && \
+tar zxf swiftly-$(uname -m).tar.gz && \
+./swiftly init --quiet-shell-followup && \
+. ~/.local/share/swiftly/env.sh && \
+hash -r
 ```
 
 verify the install was succesful
